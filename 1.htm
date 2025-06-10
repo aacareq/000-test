@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Navigator: Master Free AI Tools in 2025 - Instant Access</title>
+    <meta name="description" content="Unlock the power of free AI tools. Build custom workflows and optimize your tasks for consumers and enterprises, instantly. No signup, no data collected, no fuss.">
+
+    <!-- Tailwind CSS CDN for visual appeal & responsiveness across all form factors -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Custom Tailwind config for dark mode and theme colors
+        tailwind.config = {
+            darkMode: 'class', // Enable dark mode for user's system preference
+            theme: {
+                extend: {
+                    colors: {
+                        'indigo-primary': '#4f46e5', // Primary brand color
+                        'indigo-dark': '#3730a3',    // Darker shade for hover
+                        'indigo-light': '#a5b4fc',   // Lighter shade for dark mode accents
+                        'gray-bg-light': '#f9fafb',  // Light mode background
+                        'gray-bg-dark': '#111827',   // Dark mode background
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Global Styles & Overrides for a clean look */
+        body {
+            font-family: 'Inter', sans-serif; /* A modern, clean font fallback */
+            /* Apply Tailwind classes directly for background and text colors */
+            @apply bg-gray-bg-light text-gray-900 dark:bg-gray-bg-dark dark:text-gray-100;
+            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth dark mode transition */
+        }
+        /* Hide scrollbar for aesthetic, while allowing scroll (cross-browser) */
+        ::-webkit-scrollbar { display: none; }
+        html { scrollbar-width: none; } /* Firefox */
+
+        /* Custom styles for drag-and-drop feedback (Visual Appeal, Active Engagement) */
+        .dragging {
+            opacity: 0.5;
+            border: 2px dashed theme('colors.indigo-500');
+        }
+        .drag-over-zone {
+            background-color: theme('colors.indigo-50'); /* Light blue background for drop zone */
+            border: 2px dashed theme('colors.indigo-400');
+        }
+        /* Essential utility classes for SPA-like section switching */
+        .hidden { display: none !important; }
+        .visible { display: block !important; }
+
+        /* Animation for section transitions (Unforgettable Engagement) */
+        .fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Header (Seamless Navigation) -->
+    <header class="bg-white dark:bg-gray-800 shadow-sm py-4 px-6 flex justify-between items-center z-10 sticky top-0">
+        <a href="#home" class="text-2xl font-bold text-indigo-primary dark:text-indigo-light" aria-label="Home - Free AI Workflow Navigator">
+            AI Navigator
+        </a>
+        <nav>
+            <ul class="flex space-x-6">
+                <li><a href="#workflow" class="nav-link hover:text-indigo-primary dark:hover:text-indigo-light transition-colors" aria-label="Go to Workflow Builder">Build Workflow</a></li>
+                <li><a href="#tools" class="nav-link hover:text-indigo-primary dark:hover:text-indigo-light transition-colors" aria-label="Explore AI Tools">Explore Tools</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area (Dynamic Sections for Intention-Driven Design & Engagement) -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+
+        <!-- Home/Task Selector Section (Initial Engagement Hook) -->
+        <section id="home" class="active-section max-w-4xl mx-auto py-8 fade-in">
+            <h1 class="text-5xl font-extrabold text-center mb-6 text-indigo-primary dark:text-indigo-light leading-tight">Master Free AI Tools. Build Your Perfect Workflow. Instantly.</h1>
+            <p class="text-2xl text-center text-gray-700 dark:text-gray-300 mb-10 max-w-2xl mx-auto">Feeling overwhelmed by AI tools? Discover how to combine them for powerful, optimized, cost-free workflows for any task. No signup. No data collected. Total freedom.</p>
+
+            <div class="text-center mb-12">
+                <button id="start-building-btn" class="bg-indigo-primary hover:bg-indigo-dark text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg transform hover:scale-105 transition-all duration-300" aria-label="Start building your AI workflow now">
+                    Start Building Your Workflow <span aria-hidden="true">→</span>
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">Consumer AI Tasks</h3>
+                    <ul class="text-gray-600 dark:text-gray-400 space-y-2 text-lg">
+                        <li><span class="font-medium">Content Creation:</span> Blog posts, social media, stories.</li>
+                        <li><span class="font-medium">Research:</span> Summaries, fact-checking.</li>
+                        <li><span class="font-medium">Learning:</span> Explaining topics, flashcards.</li>
+                    </ul>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">Enterprise AI Tasks</h3>
+                    <ul class="text-gray-600 dark:text-gray-400 space-y-2 text-lg">
+                        <li><span class="font-medium">Marketing:</span> Ad copy, product descriptions.</li>
+                        <li><span class="font-medium">Data Analysis:</span> Summaries, insights.</li>
+                        <li><span class="font-medium">Automation:</span> Chatbots, workflow automation.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Exploration Section (Layered Value Delivery) -->
+        <section id="tools" class="hidden max-w-6xl mx-auto py-8 fade-in">
+            <h2 class="text-4xl font-extrabold text-center mb-6 text-indigo-primary dark:text-indigo-light">Explore Free AI Tools</h2>
+            <p class="text-xl text-center text-gray-700 dark:text-gray-300 mb-10">Discover the best tools for your tasks, instantly.</p>
+
+            <div class="flex flex-col md:flex-row gap-4 mb-8">
+                <input type="text" id="tool-search" placeholder="Search tools by name or description..."
+                    class="flex-grow px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-primary dark:bg-gray-700 dark:text-gray-100"
+                    aria-label="Search AI tools">
+                <select id="task-filter" class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-primary dark:bg-gray-700 dark:text-gray-100"
+                    aria-label="Filter by AI task category">
+                    <option value="All">All Tasks</option>
+                    <!-- Options populated by JS -->
+                </select>
+            </div>
+
+            <div id="ai-tool-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- AI Tool Cards populated by JS -->
+            </div>
+        </section>
+
+        <!-- Workflow Builder Section (Actionable Insights, Unforgettable Engagement) -->
+        <section id="workflow" class="hidden max-w-6xl mx-auto py-8 fade-in">
+            <h2 class="text-4xl font-extrabold text-center mb-6 text-indigo-primary dark:text-indigo-light">Build Your AI Workflow</h2>
+            <p class="text-xl text-center text-gray-700 dark:text-gray-300 mb-10">Drag & drop tools to create powerful, optimized AI workflows. No account needed, ever.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tool Palette -->
+                <aside class="md:col-span-1 bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 h-full sticky top-24">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">Available Tools</h3>
+                    <div id="tool-palette" class="grid grid-cols-2 gap-4">
+                        <!-- Draggable Tool Items populated by JS -->
+                    </div>
+                </aside>
+
+                <!-- Workflow Canvas -->
+                <section class="md:col-span-2 bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 min-h-[400px]"
+                         id="workflow-canvas"
+                         ondragover="event.preventDefault(); this.classList.add('drag-over-zone');"
+                         ondragleave="this.classList.remove('drag-over-zone');"
+                         ondrop="handleDrop(event);">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">Your Workflow Steps</h3>
+                    <div id="workflow-steps" class="flex flex-col gap-4">
+                        <div id="workflow-placeholder" class="text-center text-gray-500 dark:text-gray-400 py-20 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg">
+                            Drag tools here to start building your workflow.
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Prompt Generator (Meaningful Personalization & Feedback) -->
+            <div id="prompt-generator-section" class="mt-8 bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hidden">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">Generated Prompt Sequence</h3>
+                <div id="generated-prompts" class="space-y-4">
+                    <!-- Prompts generated by JS -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-400 py-6 text-center text-sm">
+        <p>© 2025 AI Navigator. Built for ultimate simplicity and instant empowerment.</p>
+        <p class="mt-2">Disclaimer: Always fact-check AI outputs, especially for critical tasks.</p>
+        <p class="mt-2 text-indigo-primary dark:text-indigo-light">This application collects no personal data and requires no accounts.</p>
+    </footer>
+
+    <!-- JavaScript for dynamic functionality (Technical Craftsmanship, Maniacal Focus on User Intents) -->
+    <script>
+        // --- Hardcoded AI Tool Data (The Core "Database" for Instant Impact) ---
+        // Image URLs are now embedded SVG directly within the string, guaranteeing they always work.
+        const allAiTools = [
+            {
+                id: 'chatgpt',
+                name: 'ChatGPT',
+                description: 'A versatile conversational AI chatbot by OpenAI, powered by GPT-4o, excels in text-based tasks.',
+                tasks_supported: ['Content Creation', 'Coding Assistance', 'Research and Fact-Checking', 'Learning and Education'],
+                strengths: ['Versatility', 'Multimodal Capabilities', 'Free Access (basic limits)', 'Memory and Personalization'],
+                weaknesses: ['Limited Real-Time Data', 'No Native Collaboration', 'Usage Caps'],
+                access_link: 'https://chat.openai.com/',
+                // Simple SVG for OpenAI/ChatGPT - a minimalist O-shape
+                image_svg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full text-indigo-500"><circle cx="12" cy="12" r="10"/><path d="M9 12h6M12 9v6"/></svg>'
+            },
+            {
+                id: 'gemini',
+                name: 'Google Gemini',
+                description: 'A multimodal AI chatbot integrated with Google’s ecosystem, great for research and productivity.',
+                tasks_supported: ['Research and Fact-Checking', 'Content Creation', 'Coding Assistance', 'Image Analysis and Generation', 'Productivity and Organization'],
+                strengths: ['Google Ecosystem Integration', 'Real-Time Data Access', 'Free Access', 'Multimodal'],
+                weaknesses: ['Limited Freeform Creativity', 'Customization Limitations'],
+                access_link: 'https://gemini.google.com/',
+                // Simple SVG for Gemini - a stylized star/burst
+                image_svg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full text-blue-500"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>'
+            },
+            {
+                id: 'claude',
+                name: 'Claude',
+                description: 'A conversational AI focused on ethical and context-aware responses, ideal for sensitive topics.',
+                tasks_supported: ['Content Creation', 'Coding Assistance', 'Document Summarization', 'Customer Support Automation'],
+                strengths: ['Ethical AI', 'Contextual Responses', 'Coding Prowess'],
+                weaknesses: ['Limited Free Access', 'No Image Generation', 'Slower for High-Volume Inputs'],
+                access_link: 'https://claude.ai/',
+                // Simple SVG for Claude - an abstract chat bubble
+                image_svg: '<svg viewBox="0 0 24 24" fill="currentColor" class="w-full h-full text-purple-500"><path d="M21 11.5a3 3 0 00-3-3H6a3 3 0 00-3 3v7a3 3 0 003 3h12a3 3 0 003-3v-7zM8 7V3a3 3 0 013-3h3a3 3 0 013 3v4H8z"/></svg>'
+            },
+            {
+                id: 'perplexity',
+                name: 'Perplexity AI',
+                description: 'An AI-powered search engine and conversational assistant that provides sourced, real-time answers.',
+                tasks_supported: ['Research and Fact-Checking', 'Document Summarization', 'Learning and Education'],
+                strengths: ['Sourced Answers', 'Real-Time Research', 'Free Plan (no signup)'],
+                weaknesses: ['Limited Depth for Complex Topics', 'Less Conversational'],
+                access_link: 'https://www.perplexity.ai/',
+                // Simple SVG for Perplexity - a stylized question mark
+                image_svg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full text-green-500"><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12" y2="17"/></svg>'
+            },
+            {
+                id: 'copilot',
+                name: 'Microsoft Copilot',
+                description: 'An AI assistant integrated with Microsoft 365 and Bing, powered by GPT-4 and DALL-E.',
+                tasks_supported: ['Content Creation', 'Coding Assistance', 'Data Analysis and Reporting', 'Image Analysis and Generation', 'Productivity and Organization'],
+                strengths: ['Microsoft Integration', 'Free Image Generation', 'Web Access'],
+                weaknesses: ['Inconsistent Accuracy', 'Ad Presence'],
+                access_link: 'https://copilot.microsoft.com/',
+                // Simple SVG for Copilot - a stylized robot/gear
+                image_svg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full text-cyan-500"><path d="M12 2a3 3 0 00-3 3v4a3 3 0 006 0V5a3 3 0 00-3-3z"/><path d="M5 10H4a2 2 0 00-2 2v3a2 2 0 002 2h1v3a2 2 0 002 2h10a2 2 0 002-2v-3h1a2 2 0 002-2v-3a2 2 0 00-2-2h-1"/></svg>'
+            },
+            {
+                id: 'deepl',
+                name: 'DeepL Translator',
+                description: 'An AI-powered translation tool using neural networks for accurate, natural translations.',
+                tasks_supported: ['Language Translation', 'Translation and Localization'],
+                strengths: ['High Accuracy', 'Free Tier', 'Simple Interface'],
+                weaknesses: ['Limited Scope', 'Character Limits'],
+                access_link: 'https://www.deepl.com/',
+                // Simple SVG for DeepL - two overlapping speech bubbles
+                image_svg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full text-teal-500"><path d="M21 11.5a3 3 0 00-3-3H6a3 3 0 00-3 3v7a3 3 0 003 3h12a3 3 0 003-3v-7z"/><path d="M16 12a3 3 0 00-3-3H4a3 3 0 00-3 3v7a3 3 0 003 3h12a3 3 0 003-3v-7z"/></svg>'
+            },
+            {
+                id: 'chatpdf',
+                name: 'ChatPDF',
+                description: 'A free tool for interacting with PDFs, generating summaries, or creating flashcards from documents.',
+                tasks_supported: ['Document Summarization', 'Learning and Education', 'Research and Fact-Checking'],
+                strengths: ['PDF Interaction', 'No Signup Required', 'Ease of Use'],
+                weaknesses: ['Limited to PDFs', 'Basic Features'],
+                access_link: 'https://www.chatpdf.com/',
+                // Simple SVG for ChatPDF - a document with a chat bubble
+                image_svg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full text-red-500"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M12 18h.01"/><path d="M16 18h.01"/><path d="M8 18h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 14h.01"/></svg>'
+            }
+        ];
+
+        let currentWorkflowTools = []; // Stores tools currently in the workflow
+
+        // --- DOM Elements Cache (Performance & Readability) ---
+        const sections = {
+            home: document.getElementById('home'),
+            tools: document.getElementById('tools'),
+            workflow: document.getElementById('workflow')
+        };
+        const toolSearchInput = document.getElementById('tool-search');
+        const taskFilterSelect = document.getElementById('task-filter');
+        const aiToolList = document.getElementById('ai-tool-list');
+        const toolPalette = document.getElementById('tool-palette');
+        const workflowCanvas = document.getElementById('workflow-canvas');
+        const workflowStepsContainer = document.getElementById('workflow-steps');
+        const workflowPlaceholder = document.getElementById('workflow-placeholder');
+        const promptGeneratorSection = document.getElementById('prompt-generator-section');
+        const generatedPromptsDiv = document.getElementById('generated-prompts');
+
+
+        // --- Navigation Logic (Seamless Navigation) ---
+        // Simple show/hide sections for SPA-like experience
+        function showSection(id) {
+            Object.values(sections).forEach(section => {
+                section.classList.add('hidden');
+                section.classList.remove('fade-in'); // Reset animation state
+            });
+            sections[id].classList.remove('hidden');
+            sections[id].classList.add('fade-in'); // Trigger fade-in animation
+
+            // Update active nav link (Visual Appeal, Intuitive Simplicity)
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.getAttribute('href') === `#${id}`) {
+                    link.classList.add('font-bold', 'text-indigo-primary', 'dark:text-indigo-light');
+                } else {
+                    link.classList.remove('font-bold', 'text-indigo-primary', 'dark:text-indigo-light');
+                }
+            });
+            window.location.hash = id; // Update URL for direct linking
+        }
+
+        // Event Listeners for main navigation
+        document.getElementById('start-building-btn').addEventListener('click', () => showSection('workflow'));
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevent default anchor jump
+                const targetId = e.target.getAttribute('href').substring(1); // Get section ID from href
+                showSection(targetId);
+            });
+        });
+
+        // Handle initial load based on URL hash or default to home
+        window.addEventListener('load', () => {
+            const hash = window.location.hash.substring(1);
+            if (sections[hash]) {
+                showSection(hash);
+            } else {
+                showSection('home'); // Default to home if no hash or invalid
+            }
+            renderAiTools(); // Initial render of tool list and palette
+            populateTaskFilter();
+        });
+        // Handle hash changes if user manually changes URL hash
+        window.addEventListener('hashchange', () => {
+            const hash = window.location.hash.substring(1);
+            if (sections[hash]) {
+                showSection(hash);
+            }
+        });
+
+
+        // --- AI Tool Data Rendering (Visual Appeal, Layered Value) ---
+        function renderAiTools() {
+            const searchTerm = toolSearchInput.value.toLowerCase();
+            const filterTask = taskFilterSelect.value;
+
+            const filteredTools = allAiTools.filter(tool => {
+                const matchesSearch = tool.name.toLowerCase().includes(searchTerm) ||
+                                      tool.description.toLowerCase().includes(searchTerm);
+                const matchesTask = filterTask === 'All' || tool.tasks_supported.includes(filterTask);
+                return matchesSearch && matchesTask;
+            });
+
+            aiToolList.innerHTML = ''; // Clear existing tool cards
+            if (filteredTools.length === 0) {
+                aiToolList.innerHTML = `<p class="col-span-full text-center text-gray-500 dark:text-gray-400">No tools found matching your criteria.</p>`;
+                return;
+            }
+
+            filteredTools.forEach(tool => {
+                const toolCard = document.createElement('div');
+                toolCard.className = `bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col`;
+                // ARIA attributes for accessibility (Trust)
+                toolCard.setAttribute('aria-labelledby', `tool-name-${tool.id}`);
+                toolCard.setAttribute('aria-describedby', `tool-desc-${tool.id}`);
+
+                const tasksHtml = tool.tasks_supported.slice(0, 2).map(task =>
+                    `<span class="inline-block bg-indigo-100 dark:bg-indigo-700 text-indigo-800 dark:text-indigo-100 text-xs px-2 py-1 rounded-full mr-1 mb-1" aria-label="Supports ${task} task">${task}</span>`
+                ).join('');
+                const moreTasksHtml = tool.tasks_supported.length > 2 ? `<span class="inline-block bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs px-2 py-1 rounded-full">+ ${tool.tasks_supported.length - 2} more</span>` : '';
+
+                toolCard.innerHTML = `
+                    <div class="w-full h-32 flex items-center justify-center p-4 bg-gray-100 dark:bg-gray-700">
+                        ${tool.image_svg}
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 id="tool-name-${tool.id}" class="text-xl font-semibold mb-2 text-indigo-700 dark:text-indigo-300">${tool.name}</h3>
+                        <p id="tool-desc-${tool.id}" class="text-gray-700 dark:text-gray-300 text-sm mb-4 flex-grow">${tool.description}</p>
+                        <div class="mt-auto">
+                            <span class="text-xs font-medium text-gray-500 dark:text-gray-400 mr-2">Tasks:</span>
+                            ${tasksHtml} ${moreTasksHtml}
+                        </div>
+                        <a href="${tool.access_link}" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block bg-indigo-primary hover:bg-indigo-dark text-white font-bold py-2 px-4 rounded-lg text-center transition-colors duration-300"
+                           aria-label="Visit ${tool.name} website">
+                            Visit Tool <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                `;
+                aiToolList.appendChild(toolCard);
+            });
+
+            renderToolPalette(); // Keep palette updated with filtered tools
+        }
+
+        // Populates the task filter dropdown from the hardcoded data
+        function populateTaskFilter() {
+            const uniqueTasks = ['All', ...new Set(allAiTools.flatMap(tool => tool.tasks_supported))].sort();
+            taskFilterSelect.innerHTML = uniqueTasks.map(task => `<option value="${task}">${task}</option>`).join('');
+        }
+
+        // Event listeners for filtering and searching
+        toolSearchInput.addEventListener('input', renderAiTools);
+        taskFilterSelect.addEventListener('change', renderAiTools);
+
+
+        // --- Workflow Builder & Drag-and-Drop (Active Engagement, Intuitive Simplicity) ---
+        function renderToolPalette() {
+            toolPalette.innerHTML = ''; // Clear existing palette items
+            // Filter tools available in the palette based on current search/filter, similar to tool list
+            const searchTerm = toolSearchInput.value.toLowerCase(); // Use the same search for palette
+            const filterTask = taskFilterSelect.value;
+            const filteredPaletteTools = allAiTools.filter(tool => {
+                const matchesSearch = tool.name.toLowerCase().includes(searchTerm) ||
+                                      tool.description.toLowerCase().includes(searchTerm);
+                const matchesTask = filterTask === 'All' || tool.tasks_supported.includes(filterTask);
+                return matchesSearch && matchesTask;
+            });
+
+
+            filteredPaletteTools.forEach(tool => {
+                const paletteItem = document.createElement('div');
+                paletteItem.className = `bg-gray-100 dark:bg-gray-700 rounded-lg p-3 text-center cursor-grab active:cursor-grabbing hover:shadow-md transition-shadow duration-200`;
+                paletteItem.setAttribute('draggable', 'true'); // Make draggable
+                paletteItem.setAttribute('data-tool-id', tool.id); // Store tool ID for drag/drop
+                paletteItem.setAttribute('aria-grabbed', 'false'); // ARIA for drag state
+                paletteItem.setAttribute('role', 'button'); // Act like a button for accessibility
+                paletteItem.setAttribute('tabindex', '0'); // Make focusable
+                paletteItem.setAttribute('aria-label', `Drag ${tool.name} to add to workflow`);
+                paletteItem.innerHTML = `
+                    <div class="w-16 h-16 mx-auto object-contain mb-2">
+                        ${tool.image_svg}
+                    </div>
+                    <span class="text-sm font-medium text-gray-800 dark:text-gray-200">${tool.name}</span>
+                `;
+                paletteItem.addEventListener('dragstart', handleDragStart); // Attach drag start listener
+                toolPalette.appendChild(paletteItem);
+            });
+        }
+
+        function renderWorkflowSteps() {
+            workflowStepsContainer.innerHTML = ''; // Clear existing steps
+            if (currentWorkflowTools.length === 0) {
+                workflowPlaceholder.classList.remove('hidden'); // Show placeholder if empty
+                promptGeneratorSection.classList.add('hidden'); // Hide prompt section
+                return;
+            } else {
+                workflowPlaceholder.classList.add('hidden'); // Hide placeholder
+                promptGeneratorSection.classList.remove('hidden'); // Show prompt section
+            }
+
+            currentWorkflowTools.forEach((tool, index) => {
+                const workflowStep = document.createElement('div');
+                workflowStep.className = `bg-indigo-50 dark:bg-indigo-900 border border-indigo-light dark:border-indigo-700 rounded-lg p-4 flex items-center justify-between shadow-sm`;
+                workflowStep.setAttribute('aria-describedby', `workflow-step-desc-${tool.id}`); // ARIA for step description
+                workflowStep.innerHTML = `
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 object-contain">
+                            ${tool.image_svg}
+                        </div>
+                        <div>
+                            <span class="font-medium text-lg text-gray-800 dark:text-gray-200">${index + 1}. ${tool.name}</span>
+                            <p id="workflow-step-desc-${tool.id}" class="text-sm text-gray-600 dark:text-gray-400 hidden sm:block">${tool.description.substring(0, 70)}...</p>
+                        </div>
+                    </div>
+                    <button class="remove-step-btn text-red-500 hover:text-red-700 dark:hover:text-red-300 transition-colors"
+                            data-tool-id="${tool.id}" aria-label="Remove ${tool.name} from workflow">
+                        ×
+                    </button>
+                `;
+                workflowStepsContainer.appendChild(workflowStep);
+            });
+
+            // Attach event listeners to new remove buttons
+            document.querySelectorAll('.remove-step-btn').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const toolIdToRemove = e.target.dataset.toolId;
+                    currentWorkflowTools = currentWorkflowTools.filter(tool => tool.id !== toolIdToRemove);
+                    renderWorkflowSteps(); // Re-render the workflow
+                    generatePrompts(); // Re-generate prompts
+                });
+            });
+
+            generatePrompts(); // Always re-generate prompts after workflow changes
+        }
+
+        // Drag and Drop Handlers
+        function handleDragStart(e) {
+            e.dataTransfer.setData('text/plain', e.target.dataset.toolId);
+            e.target.classList.add('dragging'); // Add visual feedback for dragging
+        }
+        workflowCanvas.addEventListener('dragenter', (e) => { e.preventDefault(); }); // Allow dropping
+        workflowCanvas.addEventListener('dragleave', () => { workflowCanvas.classList.remove('drag-over-zone'); });
+        workflowCanvas.addEventListener('dragover', (e) => { e.preventDefault(); workflowCanvas.classList.add('drag-over-zone'); }); // Highlight drop zone
+        workflowCanvas.addEventListener('dragend', (e) => { // Clean up after drag ends
+            if (e.target && e.target.classList) {
+                e.target.classList.remove('dragging');
+            }
+            workflowCanvas.classList.remove('drag-over-zone');
+        });
+
+        function handleDrop(e) {
+            e.preventDefault();
+            workflowCanvas.classList.remove('drag-over-zone'); // Remove highlight
+            const toolId = e.dataTransfer.getData('text/plain');
+            const tool = allAiTools.find(t => t.id === toolId);
+            if (tool && !currentWorkflowTools.some(t => t.id === tool.id)) { // Prevent duplicates for simplicity
+                currentWorkflowTools.push(tool);
+                renderWorkflowSteps(); // Re-render the workflow
+            }
+        }
+
+        // --- Prompt Generation (Actionable Insights & Transformation) ---
+        function generatePrompts() {
+            generatedPromptsDiv.innerHTML = ''; // Clear previous prompts
+            if (currentWorkflowTools.length === 0) {
+                generatedPromptsDiv.innerHTML = `<p class="text-gray-500 dark:text-gray-400">Add tools to your workflow to generate prompts.</p>`;
+                return;
+            }
+
+            let promptHtml = '';
+            currentWorkflowTools.forEach((tool, index) => {
+                let suggestedPrompt = ""; // Placeholder for dynamic prompts
+                const workflowName = "My AI Task"; // This could be made dynamic if we added input for it
+
+                // Generate specific prompts based on the guideline's examples and tool strengths
+                switch (tool.id) {
+                    case 'chatgpt':
+                        if (index === 0) { // If ChatGPT is first
+                            suggestedPrompt = `**Task:** Content Creation (Blog Post)\n**Prompt for ChatGPT:** "As an expert blog writer, draft a 300-word blog post about 'Latest trends in AI for 2025'. Focus on [YOUR TOPIC ASPECT HERE]. Ensure a [TONE, e.g., engaging/professional] tone. Outline key sub-sections."`;
+                        } else if (currentWorkflowTools[index - 1] && currentWorkflowTools[index - 1].id === 'perplexity') {
+                            suggestedPrompt = `**Task:** Refine Research into Content\n**Prompt for ChatGPT (after Perplexity):** "Based on the research from Perplexity AI about '[YOUR TOPIC]', write an engaging 400-word article explaining [SPECIFIC CONCEPT]. Use simple terms and integrate key facts, but do not directly copy phrases from sources. Your goal is to make it accessible to a [TARGET AUDIENCE]."`;
+                        } else {
+                            suggestedPrompt = `**Task:** General Content/Coding/Learning\n**Prompt for ChatGPT:** "Help me [ACTION, e.g., brainstorm ideas/debug code/explain concept] for [CONTEXT]. Provide specific examples or steps."`;
+                        }
+                        break;
+                    case 'gemini':
+                        if (index === 0) { // If Gemini is first
+                             suggestedPrompt = `**Task:** Real-Time Research / Productivity\n**Prompt for Google Gemini:** "Find the latest news and advancements in '[TOPIC]' from the past month. Summarize key takeaways. Also, draft an email to [COLLEAGUE/TEAM] summarizing this research and suggest a 15-minute meeting for next [DAY]."`;
+                        } else {
+                            suggestedPrompt = `**Task:** Integration with Google Workspace\n**Prompt for Google Gemini (after [PREVIOUS_TOOL]):** "Given the text/data from [PREVIOUS_TOOL], summarize it and draft a Google Doc outline for a presentation on '[TOPIC]'. Can you also suggest 3 relevant events for my Google Calendar?"`;
+                        }
+                        break;
+                    case 'claude':
+                        if (index === 0) { // If Claude is first
+                            suggestedPrompt = `**Task:** Ethical Content / Sensitive Communication\n**Prompt for Claude:** "Draft a customer support email for a user experiencing [SENSITIVE ISSUE]. The tone should be empathetic, reassuring, and clearly outline the next steps. Ensure it avoids any biased or harmful language."`;
+                        } else if (currentWorkflowTools[index - 1] && currentWorkflowTools[index - 1].id === 'chatgpt') {
+                            suggestedPrompt = `**Task:** Ethical Review / Code Refinement\n**Prompt for Claude (after ChatGPT):** "Review the following draft content/code from ChatGPT for any potential biases, ethical concerns, or areas that could be misinterpreted. Provide specific suggestions for improvement.\n\n[PASTE CHATGPT OUTPUT HERE]"`;
+                        } else {
+                            suggestedPrompt = `**Task:** Long Document Summarization / Code Assistance\n**Prompt for Claude:** "Summarize this long document/article about [TOPIC], focusing on the main arguments and conclusions. OR Debug the following [LANGUAGE] code snippet for [PROBLEM]: [PASTE CODE HERE]."`;
+                        }
+                        break;
+                    case 'perplexity':
+                        if (index === 0) { // If Perplexity is first
+                            suggestedPrompt = `**Task:** Deep Research & Fact-Checking\n**Prompt for Perplexity AI:** "Provide a detailed overview of 'Current market trends in sustainable technology for 2025'. Cite at least 5 reliable sources from academic papers, news, or industry reports. Focus on [SPECIFIC ASPECT]."`;
+                        } else if (currentWorkflowTools[index - 1] && currentWorkflowTools[index - 1].id === 'chatgpt') {
+                            suggestedPrompt = `**Task:** Validate AI-Generated Content\n**Prompt for Perplexity AI (after ChatGPT):** "Verify the factual accuracy of the following statement/paragraph generated by ChatGPT: '[PASTE CHATGPT CONTENT HERE]'. Provide sources to confirm or refute each claim."`;
+                        } else {
+                            suggestedPrompt = `**Task:** General Sourced Information\n**Prompt for Perplexity AI:** "Explain [COMPLEX CONCEPT] and cite academic sources. What are the pros and cons of [TECHNOLOGY]?"`;
+                        }
+                        break;
+                    case 'copilot':
+                        if (index === 0) { // If Copilot is first
+                            suggestedPrompt = `**Task:** Integrated Productivity & Image Generation\n**Prompt for Microsoft Copilot:** "Generate 3 unique marketing slogans for a new [PRODUCT TYPE] targeting [AUDIENCE]. Also, create a compelling visual concept for a social media ad for this product, using a [STYLE, e.g., minimalist, vibrant] aesthetic."`;
+                        } else {
+                            suggestedPrompt = `**Task:** Excel Data Analysis / Image Concept\n**Prompt for Microsoft Copilot (after [PREVIOUS_TOOL]):** "Given the data from [PREVIOUS_TOOL], suggest an Excel formula to calculate [METRIC, e.g., ROI/customer retention]. OR Create a logo concept for a startup called '[COMPANY NAME]' specializing in [INDUSTRY]."`;
+                        }
+                        break;
+                    case 'deepl':
+                        if (currentWorkflowTools.length > 0 && index > 0) {
+                            suggestedPrompt = `**Task:** High-Accuracy Translation\n**Prompt for DeepL Translator (after [PREVIOUS_TOOL]):** "Translate the following [LANGUAGE OF INPUT] text from [PREVIOUS_TOOL]'s output into [TARGET LANGUAGE, e.g., Spanish/French]. Ensure it sounds natural and contextually accurate:\n\n[PASTE TEXT HERE]"`;
+                        } else {
+                            suggestedPrompt = `**Task:** General Translation\n**Prompt for DeepL Translator:** "Translate this email into [LANGUAGE]: '[PASTE EMAIL TEXT HERE]'."`;
+                        }
+                        break;
+                    case 'chatpdf':
+                        if (index === 0) { // If ChatPDF is first
+                            suggestedPrompt = `**Task:** PDF Summarization / Learning\n**Prompt for ChatPDF:** "Upload this PDF file: [DRAG & DROP PDF HERE]. Summarize the key arguments and main conclusions of this research paper. Additionally, create 5 flashcards based on the most important concepts."`;
+                        } else if (currentWorkflowTools[index - 1] && currentWorkflowTools[index - 1].id === 'perplexity') {
+                             suggestedPrompt = `**Task:** Deep Dive on Sourced PDFs\n**Prompt for ChatPDF (after Perplexity):** "I used Perplexity AI to find sources on [TOPIC]. Now, I'm uploading a PDF you linked. Please summarize section 3.2 and answer: '[SPECIFIC QUESTION RELATED TO PDF CONTENT]'."`;
+                        } else {
+                            suggestedPrompt = `**Task:** Extract Key Information from PDFs\n**Prompt for ChatPDF:** "From the uploaded PDF, identify all dates mentioned and the corresponding events. Also, explain [SPECIFIC TERM] as defined in the document."`;
+                        }
+                        break;
+                    default:
+                        suggestedPrompt = `For ${tool.name}: "How can I leverage this tool for [YOUR SPECIFIC TASK]? Give me a concise example."`;
+                }
+
+
+                promptHtml += `
+                    <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg border border-gray-200 dark:border-gray-600">
+                        <h4 class="font-semibold text-lg mb-2" id="prompt-for-${tool.id}">Step ${index + 1}: ${tool.name}</h4>
+                        <p class="text-gray-700 dark:text-gray-300 text-sm mb-3">Goal: ${tool.tasks_supported[0]} (primary focus)</p>
+                        <div class="relative">
+                            <textarea class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100" rows="6" readonly aria-labelledby="prompt-for-${tool.id}">${suggestedPrompt}</textarea>
+                            <button class="copy-prompt-btn absolute top-2 right-2 bg-indigo-200 hover:bg-indigo-300 text-indigo-800 px-3 py-1 rounded-md text-xs font-semibold"
+                                    data-prompt="${encodeURIComponent(suggestedPrompt)}" aria-label="Copy prompt for ${tool.name}">
+                                Copy
+                            </button>
+                        </div>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">Visit tool: <a href="${tool.access_link}" target="_blank" rel="noopener noreferrer" class="text-indigo-primary hover:underline">Link to ${tool.name}</a></p>
+                    </div>
+                `;
+            });
+            generatedPromptsDiv.innerHTML = promptHtml;
+
+            // Attach copy functionality to new buttons (Instant Gratification)
+            document.querySelectorAll('.copy-prompt-btn').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const promptText = decodeURIComponent(e.target.dataset.prompt);
+                    navigator.clipboard.writeText(promptText)
+                        .then(() => {
+                            e.target.textContent = 'Copied!';
+                            setTimeout(() => e.target.textContent = 'Copy', 2000); // Reset button text
+                        })
+                        .catch(err => console.error('Failed to copy text: ', err));
+                });
+            });
+        }
+    </script>
+</body>
+</html>
